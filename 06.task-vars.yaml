@@ -1,0 +1,19 @@
+- name: variables
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "ABC"
+    DURATION: 10HRS
+    TOPICS: XYZ
+
+  tasks: 
+    - name: print the varaibles
+      vars:
+      COURSE: Ansible
+      ansible.builtin.debug:
+        msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Topics are {{ TOPICS }}"
+
+
+    - name: print the varaibles1
+      ansible.builtin.debug:
+        msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Topics are {{ TOPICS }}"
