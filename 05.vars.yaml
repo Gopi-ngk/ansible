@@ -7,7 +7,7 @@
     TOPICS: XYZ
 
   tasks: 
-  - name: print the varaible
-    ansible.builtin.debug:
-      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Topics are {{ TOPICS }}"
+    - name: print the varaible
+      ansible.builtin.debug:
+        msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Topics are {{ TOPICS }}"
 
