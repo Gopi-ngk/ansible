@@ -22,11 +22,19 @@
   #     msg: "Course info: {{ course | dict2items }}"
 
   
-  - name: convert list into map
+  # - name: convert list into map
+  #   vars:
+  #     course:
+  #     - {'key': 'name', 'value': 'ansible'}
+  #     - {'key': 'duration', 'value': '10hrs'}
+  #     - {'key': 'topics', 'value': 'XYZ'}
+  #   ansible.builtin.debug:
+  #     msg: "Course info: {{ course | items2dict }}"
+
+  - name: convert upper to lower
+    tags:
+    - uppertolower
     vars:
-      course:
-      - {'key': 'name', 'value': 'ansible'}
-      - {'key': 'duration', 'value': '10hrs'}
-      - {'key': 'topics', 'value': 'XYZ'}
+      name: "Sivakumar Reddy M"
     ansible.builtin.debug:
-      msg: "Course info: {{ course | items2dict }}"
+      msg: "Hello {{ name | lower }}"
