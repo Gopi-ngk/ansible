@@ -2,11 +2,11 @@
   connection: local
   hosts: local
   vars:
-    subnet_id: subnet-0ea509ad4cba242d7
-    sg_id: sg-0e978039cdb6c3057
+    subnet_id: subnet-0af59a83a2a086275
+    sg_id: sg-074e3fe40d615b87c
     ami_id: ami-09c813fb71547fc4f
     instance_type: t3.micro
-    zone: daws82s.online
+    # zone: gopinath.store
     instances:
     - mysql
     - backend
@@ -19,7 +19,7 @@
     loop:
     - boto3
     - botocore
-    
+
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
